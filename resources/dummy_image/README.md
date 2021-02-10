@@ -1,1 +1,1 @@
-# Go to @Fridayot
+# Go to the @slayer_userbot
