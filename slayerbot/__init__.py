@@ -17,7 +17,7 @@ from telegraph import Telegraph, exceptions, upload_file
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
-from fridaybot.Configs import Config
+from slayerbot.Configs import Config
 
 from .Configs import Config
 
@@ -222,5 +222,5 @@ try:
 except:
     pass
 
-friday_version = "7.0"
-friday_name = "FridayUserBot V7.0"
+slayer_version = "7.0"
+slayer_name = "SlayerUserBot V7.0"
