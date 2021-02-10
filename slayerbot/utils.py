@@ -6,16 +6,16 @@ from pathlib import Path
 
 from telethon import events
 
-from fridaybot import CMD_LIST, LOAD_PLUG, SUDO_LIST, bot, client2, client3, CMD_HELP
-from fridaybot.Configs import Config
-from fridaybot.wraptools import (
+from slayerbot import CMD_LIST, LOAD_PLUG, SUDO_LIST, bot, client2, client3, CMD_HELP
+from slayerbot.Configs import Config
+from slayerbot.wraptools import (
     am_i_admin,
     ignore_bot,
     ignore_fwd,
     ignore_grp,
     ignore_pm,
 )
-from fridaybot.Configs import Config
+from slayerbot.Configs import Config
 sedprint = logging.getLogger("PLUGINS")
 cmdhandler = Config.COMMAND_HAND_LER
 bothandler = Config.BOT_HANDLER
@@ -99,11 +99,11 @@ def load_module(shortname):
         import sys
         from pathlib import Path
 
-        import fridaybot.modules
-        import fridaybot.utils
+        import slayerbot.modules
+        import slayerbot.utils
 
-        path = Path(f"fridaybot/modules/{shortname}.py")
-        name = "fridaybot.modules.{}".format(shortname)
+        path = Path(f"slayerbot/modules/{shortname}.py")
+        name = "slayerbot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -113,11 +113,11 @@ def load_module(shortname):
         import sys
         from pathlib import Path
 
-        import fridaybot.modules
-        import fridaybot.utils
+        import slayerbot.modules
+        import slayerbot.utils
 
-        path = Path(f"fridaybot/modules/{shortname}.py")
-        name = "fridaybot.modules.{}".format(shortname)
+        path = Path(f"slayerbot/modules/{shortname}.py")
+        name = "slayerbot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -127,15 +127,15 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = fridaybot.utils
-        sys.modules["friday.util"] = fridaybot.utils
-        sys.modules["userbot.utils"] = fridaybot.utils
-        sys.modules["userbot.plugins"] = fridaybot.modules
-        sys.modules["plugins"] = fridaybot.modules
-        sys.modules["userbot"] = fridaybot
-        mod.admin_cmd = friday_on_cmd
+        sys.modules["uniborg.util"] = slayerbot.utils
+        sys.modules["slayer.util"] = slayerbot.utils
+        sys.modules["userbot.utils"] = slayerbot.utils
+        sys.modules["userbot.plugins"] = slayerbot.modules
+        sys.modules["plugins"] = slayerbot.modules
+        sys.modules["userbot"] = slayerbot
+        mod.admin_cmd = slayer_on_cmd
         mod.sudo_cmd = sudo_cmd
-        mod.friday_on_cmd = friday_on_cmd
+        mod.slayer_on_cmd = slayer_on_cmd
         mod.CMD_HELP = CMD_HELP
         mod.Config = Config
         mod.ignore_grp = ignore_grp()
@@ -144,12 +144,12 @@ def load_module(shortname):
         mod.am_i_admin = am_i_admin()
         mod.ignore_fwd = ignore_fwd()
         mod.borg = bot
-        mod.friday = bot
+        mod.slayer = bot
         # support for paperplaneextended
-        sys.modules["fridaybot.events"] = fridaybot.utils
+        sys.modules["slayerbot.events"] = slayerbot.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["fridaybot.modules." + shortname] = mod
+        sys.modules["slayerbot.modules." + shortname] = mod
         sedprint.info("Successfully imported " + shortname)
 
 def load_module_dclient(shortname, client):
@@ -160,11 +160,11 @@ def load_module_dclient(shortname, client):
         import sys
         from pathlib import Path
 
-        import fridaybot.modules
-        import fridaybot.utils
+        import slayerbot.modules
+        import slayerbot.utils
 
-        path = Path(f"fridaybot/modules/{shortname}.py")
-        name = "fridaybot.modules.{}".format(shortname)
+        path = Path(f"slayerbot/modules/{shortname}.py")
+        name = "slayerbot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -173,11 +173,11 @@ def load_module_dclient(shortname, client):
         import sys
         from pathlib import Path
 
-        import fridaybot.modules
-        import fridaybot.utils
+        import slayerbot.modules
+        import slayerbot.utils
 
-        path = Path(f"fridaybot/modules/{shortname}.py")
-        name = "fridaybot.modules.{}".format(shortname)
+        path = Path(f"slayerbot/modules/{shortname}.py")
+        name = "slayerbot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = client
@@ -188,15 +188,15 @@ def load_module_dclient(shortname, client):
         sedlu = str(shortname) + "- MClient -"
         mod.logger = logging.getLogger(sedlu)
         # support for uniborg
-        sys.modules["uniborg.util"] = fridaybot.utils
-        sys.modules["friday.util"] = fridaybot.utils
-        sys.modules["userbot.utils"] = fridaybot.utils
-        sys.modules["userbot.plugins"] = fridaybot.modules
-        sys.modules["plugins"] = fridaybot.modules
-        sys.modules["userbot"] = fridaybot
-        mod.admin_cmd = friday_on_cmd
+        sys.modules["uniborg.util"] = slayerbot.utils
+        sys.modules["slayer.util"] = slayerbot.utils
+        sys.modules["userbot.utils"] = slayerbot.utils
+        sys.modules["userbot.plugins"] = slayerbot.modules
+        sys.modules["plugins"] = slayerbot.modules
+        sys.modules["userbot"] = slayerbot
+        mod.admin_cmd = slayer_on_cmd
         mod.sudo_cmd = sudo_cmd
-        mod.friday_on_cmd = friday_on_cmd
+        mod.slayer_on_cmd = slayer_on_cmd
         mod.Config = Config
         mod.ignore_grp = ignore_grp()
         mod.ignore_pm = ignore_pm()
@@ -204,12 +204,12 @@ def load_module_dclient(shortname, client):
         mod.am_i_admin = am_i_admin()
         mod.ignore_fwd = ignore_fwd()
         mod.borg = client
-        mod.friday = client
+        mod.slayer = client
         mod.CMD_HELP = CMD_HELP
         # support for paperplaneextended
-        sys.modules["fridaybot.events"] = fridaybot.utils
+        sys.modules["slayerbot.events"] = slayerbot.utils
         spec.loader.exec_module(mod)
-        sys.modules["fridaybot.modules." + shortname] = mod
+        sys.modules["slayerbot.modules." + shortname] = mod
 
 def remove_plugin(shortname):
     try:
@@ -219,7 +219,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except:
-            name = f"fridaybot.modules.{shortname}"
+            name = f"slayerbot.modules.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -270,7 +270,7 @@ def admin_cmd(pattern=None, **args):
     # check if the plugin should listen for outgoing 'messages'
     return events.NewMessage(**args)
 
-def friday_on_cmd(pattern=None, **args):
+def slayer_on_cmd(pattern=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
 
     stack = inspect.stack()
@@ -312,7 +312,7 @@ def friday_on_cmd(pattern=None, **args):
 
 
 """ Userbot module for managing events.
- One of the main components of the fridaybot. """
+ One of the main components of the slayerbot. """
 
 import asyncio
 import datetime
@@ -323,7 +323,7 @@ from time import gmtime, strftime
 
 from telethon import events
 
-from fridaybot import bot
+from slayerbot import bot
 
 
 def register(**args):
@@ -386,7 +386,7 @@ def errors_handler(func):
 
             text = "**USERBOT CRASH REPORT**\n\n"
 
-            link = "[Here](https://t.me/FridayOT)"
+            link = "[Here](https://t.me/slayerOT)"
             text += "If you wanna you can report it"
             text += f"- just forward this message {link}.\n"
             text += "Nothing is logged except the fact of error and date\n"
@@ -397,7 +397,7 @@ def errors_handler(func):
             ftext += "\nyou may not report this error if you've"
             ftext += "\nany confidential data here, no one will see your data\n\n"
 
-            ftext += "--------BEGIN FRIDAY USERBOT TRACEBACK LOG--------"
+            ftext += "--------BEGIN slayer USERBOT TRACEBACK LOG--------"
             ftext += "\nDate: " + date
             ftext += "\nGroup ID: " + str(errors.chat_id)
             ftext += "\nSender ID: " + str(errors.sender_id)
@@ -713,8 +713,8 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"fridaybot/modules/assistant/{shortname}.py")
-        name = "fridaybot.modules.assistant.{}".format(shortname)
+        path = Path(f"slayerbot/modules/assistant/{shortname}.py")
+        name = "slayerbot.modules.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -725,8 +725,8 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"fridaybot/modules/assistant/{shortname}.py")
-        name = "fridaybot.modules.assistant.{}".format(shortname)
+        path = Path(f"slayerbot/modules/assistant/{shortname}.py")
+        name = "slayerbot.modules.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
@@ -742,5 +742,5 @@ def start_assistant(shortname):
         mod.peru_only = peru_only()
         mod.only_pvt = only_pvt()
         spec.loader.exec_module(mod)
-        sys.modules["fridaybot.modules.assistant" + shortname] = mod
+        sys.modules["slayerbot.modules.assistant" + shortname] = mod
         sedprint.info("Assistant Has imported " + shortname)
