@@ -1,4 +1,4 @@
-#    Copyright (C) Midhun KM 2020-2021
+#    Copyright (C) SLAYER 2020-2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -13,7 +13,7 @@
 
 
 from sqlalchemy import Column, String, UnicodeText
-from fridaybot.modules.sql_helper import BASE, SESSION
+from slayerbot.modules.sql_helper import BASE, SESSION
 
 
 class Gban(BASE):
