@@ -2,7 +2,7 @@
 
 import heroku3
 
-from fridaybot.Configs import Config
+from slayerbot.Configs import Config
 
 herokuclient = heroku3.from_key(Config.HEROKU_API_KEY)
 
