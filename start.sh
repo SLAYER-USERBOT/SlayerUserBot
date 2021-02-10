@@ -1,8 +1,9 @@
-echo """ ____  ____  __  ____   __   _  _
-(  __)(  _ \(  )(    \ / o\ ( \/ )
- ) _)  )   / )(  ) D (/    \ )  /
-(__)  (__\_)(__)(____/\_/\_/(__/
+echo """ ‌‌‎ ____   ___ _____ 
+         | __ ) / _ \_   _|
+         |  _ \| | | || |  
+         | |_) | |_| || |  
+         |____/ \___/ |_|
 
-(C) @FRIDAYOT @ TELEGRAM
+(C) @slayer_userbot @ TELEGRAM
 """
-python3 -m fridaybot
+python3 -m slayerbot
