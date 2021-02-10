@@ -1,4 +1,4 @@
-#    Copyright (C) Midhun KM 2020-2021
+#    Copyright (C) SLAYER 2020-2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -15,7 +15,7 @@
 import time
 from datetime import datetime
 
-from fridaybot import Lastupdate
+from slayerbot import Lastupdate
 
 
 def get_readable_time(seconds: int) -> str:
