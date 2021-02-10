@@ -10,9 +10,9 @@
 
 # Support
 
-<a href="https://t.me/FridaySupportOfficial"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/slayer_userbot"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 
-<a href="https://t.me/fridayOT"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+<a href="https://t.me/slayer_userbot_support"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 
 
@@ -37,12 +37,12 @@
 * Customizable.
 * Much Cleaner And Stable.
 * Daily Maintained.
-* NoSpam+ Support.
+* ֆʟǟʏɛʀ υѕєявσт ™ Support.
 
 
 # Deploying To Heroku
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DevsExpo/FridayUserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SLAYER-USERBOT/SlayerUserbot)
 
 
 
@@ -72,9 +72,9 @@
 ## Simply clone the repository and run the main file:
 ```sh
 # Install Git First // (Else You Can Download And Upload to Your Local Server)
-$ git clone https://github.com/DevsExpo/FridayUserbot
+$ git clone https://github.com/SLAYER-USERBOT/Slayer-Userbot
 # Open Git Cloned File
-$ cd FridayUserbot
+$ cd SlayerUserbot
 # Config Virtual Env (Skip is already Done.)
 $ virtualenv -p /usr/bin/python3 venv
 $ . ./venv/bin/activate
@@ -82,7 +82,7 @@ $ . ./venv/bin/activate
 $ pip(3) install -r requirements.txt
 # Create local_config.py with variables as given below
 # Start Bot 
-$ python(3) -m fridaybot
+$ python(3) -m slayerbot
 ```
 
 # Mandatory Configs
@@ -113,7 +113,7 @@ class Development(object):
 # Licence
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
 
-FridayUserbot is Free Software: You can use, study share and improve it at your
+SlayerUserbot is Free Software: You can use, study share and improve it at your
 will. Specifically you can redistribute and/or modify it under the terms of the
 [GNU General Public License](https://www.gnu.org/licenses/gpl.html) as
 published by the Free Software Foundation, either version 3 of the License, or
