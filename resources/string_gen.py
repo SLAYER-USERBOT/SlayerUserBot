@@ -7,10 +7,11 @@
 from telethon.sessions import StringSession
 from telethon.sync import TelegramClient
 
-ok = """ ____  ____  __  ____   __   _  _
-(  __)(  _ \(  )(    \ / o\ ( \/ )
- ) _)  )   / )(  ) D (/    \ )  /
-(__)  (__\_)(__)(____/\_/\_/(__/
+ok = """  ____   ___ _____ 
+         | __ ) / _ \_   _|
+         |  _ \| | | || |  
+         | |_) | |_| || |  
+         |____/ \___/ |_|
 """
 print(ok)
 APP_ID = int(input("Enter APP ID here: \n"))
