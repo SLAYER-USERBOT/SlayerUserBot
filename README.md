@@ -1,5 +1,5 @@
 <p align="center"><a href="https://t.me/fridayot"><img src="https://telegra.ph/file/22535f8051a58af113586.jpg" width="5000"></a></p> 
-<h1 align="center"><b>FRIDAY-USERBOT 🇮🇳 </b></h1>
+<h1 align="center"><b>SLAYER USERBOT </b></h1>
 <h4 align="center">A Powerful, Smart And Simple Userbot In Telethon. Powered By NoSpam+</h4>
 
 
