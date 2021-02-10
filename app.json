@@ -1,17 +1,17 @@
 {
-  "name": "Friday-Userbot",
-  "description": "A Userbot Based On Telethon By Friday Devs",
+  "name": "ֆʟǟʏɛʀ υѕєявσт ™",
+  "description": "A Userbot Based On Telethon By ֆʟǟʏɛʀ υѕєявσт ™",
   "logo": "https://telegra.ph/file/b4e1e36c6b1fcb32dd997.jpg",
   "keywords": [
     "telegram",
-    "fridaybot",
+    "slayerbot",
     "plugin",
-    "telegram-fridaybot",
+    "telegram-userbot",
     "productivity"
   ],
-  "repository": "https://github.com/starkgang/FridayUserbot",
-  "website": "starkgang.ml",
-  "success_url": "t.me/FridayOT",
+  "repository": "https://github.com/SLAYER-USERBOT/SlayerUserbot",
+  "website": "Not Yet",
+  "success_url": "t.me/slayer_userbot_support",
   "stack": "container",
   "env": {
     "ENV": {
@@ -30,11 +30,7 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
-    "NOSPAMPLUS_TOKEN": {
-      "description": "Your Token From @NospamPlusBot",
-      "value": "",
-      "required": false
-    },
+    
     "SUDO_USERS": {
       "description": "Enter A User Id Which You Would Like to Use To Control Sudo. Don't Give Your Own ID Or ID Of Users You Don't Trust.",
       "value": "",
