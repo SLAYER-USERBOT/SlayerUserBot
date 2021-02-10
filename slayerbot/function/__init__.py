@@ -1,4 +1,4 @@
-#    Copyright (C) Midhun KM 2020-2021
+#    Copyright (C) SLAYER 2020-2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -27,9 +27,9 @@ import shutil
 import os
 import argparse
 import wget
-from fridaybot import bot as borg
+from slayerbot import bot as borg
 import lottie
-from fridaybot.utils import load_module
+from slayerbot.utils import load_module
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
@@ -43,7 +43,7 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 import asyncio
-from fridaybot.function.FastTelethon import download_file
+from slayerbot.function.FastTelethon import download_file
 import json
 import math
 import os
@@ -67,15 +67,15 @@ from telethon.tl.types import MessageMediaPhoto
 from typing import Union
 SIZE_UNITS = ["B", "KB", "MB", "GB", "TB", "PB"]
 BASE_URL = "https://isubtitles.org"
-from fridaybot.Configs import Config
+from slayerbot.Configs import Config
 import zipfile
 import os
 import aiohttp
-from fridaybot.function.FastTelethon import upload_file
+from slayerbot.function.FastTelethon import upload_file
 
 
 sedpath = Config.TMP_DOWNLOAD_DIRECTORY
-from fridaybot import logging
+from slayerbot import logging
 
 logger = logging.getLogger("[--WARNING--]")
 if not os.path.isdir(sedpath):
