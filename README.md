@@ -46,21 +46,6 @@
 
 
 
-
-# Developers // Maintainers // Credits
-## This is Team Project And We All Maintained This Together :)
-
-* [@Chsaiujwal](https://telegram.dog/Chsaiujwal)
-* [@Meisnub](https://telegram.dog/MeisNub)
-* [@Midhun_xD](https://telegram.dog/Midhun_xD)
-* [@SpecHide](https://telegram.dog/SpecHide)
-* [@S_n_a_p_s](https://telegram.dog/s_n_a_p_s)
-* [@RaphielScape](https://github.com/raphielscape)
-* [@Nitin1818](https://github.com/Nitin1818)
-* [@PureIndiaLover](https://telegram.dog/PureIndiaLover)
-* [@BLUE-DEVIL1134](https://github.com/BLUE-DEVIL1134)
-
-
 # String Session
 ## Repl
 [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://friday.midhunkm1294.repl.run)
