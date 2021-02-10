@@ -1,4 +1,4 @@
-#    Copyright (C) Midhun KM 2020-2021
+#    Copyright (C) SLAYER 2020-2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -21,15 +21,15 @@ import telethon
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
 
-from fridaybot import bot
-from fridaybot.Configs import Config
-from fridaybot.modules.sql_helper.blacklist_assistant import (
+from slayerbot import bot
+from slayerbot.Configs import Config
+from slayerbot.modules.sql_helper.blacklist_assistant import (
     add_nibba_in_db,
     is_he_added,
     removenibba,
 )
-from fridaybot.modules.sql_helper.botusers_sql import add_me_in_db, his_userid
-from fridaybot.modules.sql_helper.idadder_sql import (
+from slayerbot.modules.sql_helper.botusers_sql import add_me_in_db, his_userid
+from slayerbot.modules.sql_helper.idadder_sql import (
     add_usersid_in_db,
     already_added,
     get_all_users,
@@ -46,7 +46,7 @@ async def start(event):
     hmmwow = devlop.first_name
     vent = event.chat_id
     mypic = Config.ASSISTANT_START_PIC
-    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={bot.uid}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [Friday Userbot](t.me/FridayOT)"
+    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={bot.uid}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [Slayer Userbot](t.me/Slayer_UserBot)"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
@@ -72,8 +72,8 @@ async def start(event):
             caption=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.inline("Deploy your Friday 🇮🇳", data="deploy")],
-                [Button.url("Help Me ❓", "t.me/Fridayot")],
+                [custom.Button.inline("Deploy your Slayer 🇮🇳", data="deploy")],
+                [Button.url("Help Me ❓", "t.me/slayer_userbot")],
             ],
         )
         if os.path.exists(mypic):
@@ -89,10 +89,10 @@ async def help(event):
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
             event.chat_id,
-            message="You Can Deploy Friday In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            message="You Can Deploy Slayer In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
             buttons=[
                 [Button.url("Deploy Tutorial 📺", "https://youtu.be/xfHcm_e92eQ")],
-                [Button.url("Need Help ❓", "t.me/FridaySupportOfficial")],
+                [Button.url("Need Help ❓", "t.me/slayeruserbot")],
             ],
         )
 
