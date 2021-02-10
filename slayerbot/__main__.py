@@ -160,7 +160,7 @@ fridaydevs.info(f"""{wsta}
 -------------------------------------------
 Slayer-Userbot Based On Telethon V{tv}
 Python Version : {platform.python_version()}
-Friday-Userbot Version : V{friday_version}
+Slayer-Userbot Version : V{slayer_version}
 Support Chat : @Slayer_userbot_Support
 Updates Channel : @Slayer_Userbot
 Total Clients : {total_clients}
