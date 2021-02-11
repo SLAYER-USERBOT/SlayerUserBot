@@ -1,4 +1,4 @@
-"""AFK Plugin for @FridayOT
+"""AFK Plugin for @SLAYER_USERBOT
 Syntax: .afk REASON"""
 import asyncio
 import datetime
@@ -7,7 +7,7 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from fridaybot import CMD_HELP
+from slayerbot import CMD_HELP
 
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602
@@ -20,7 +20,7 @@ last_afk_message = {}
 afk_start = {}
 
 
-@friday.on(
+@slayer.on(
     events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True)
 )  # pylint:disable=E0602
 async def _(event):
