@@ -8,7 +8,7 @@ Userbot module to help you manage a group
 
 from asyncio import sleep
 from os import remove
-from fridaybot.function import is_admin
+from slayerbot.function import is_admin
 from telethon.errors import (
     BadRequestError,
     ChatAdminRequiredError,
@@ -31,8 +31,8 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from fridaybot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from fridaybot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
+from slayerbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from slayerbot.utils import edit_or_reply, slayer_on_cmd, sudo_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
@@ -126,8 +126,8 @@ async def get_user_sender_id(user, event):
 
 
 # @register(outgoing=True, pattern="^.setevent$")
-@friday.on(friday_on_cmd(pattern="setgpic$"))
-@friday.on(sudo_cmd(pattern="setgpic$", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="setgpic$"))
+@slayer.on(sudo_cmd(pattern="setgpic$", allow_sudo=True))
 async def set_group_photo(event):
     if event.fwd_from:
         return
@@ -165,8 +165,8 @@ async def set_group_photo(event):
 
 
 # @register(outgoing=True, pattern="^.promote(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern="promote(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="promote(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
 async def promote(event):
     if event.fwd_from:
         return
@@ -224,8 +224,8 @@ async def promote(event):
 
 
 # @register(outgoing=True, pattern="^.demote(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern="demote(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="demote(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
 async def demote(event):
     if event.fwd_from:
         return
@@ -281,8 +281,8 @@ async def demote(event):
 
 
 # @register(outgoing=True, pattern="^.ban(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern="ban(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="ban(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="ban(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="ban(?: |$)(.*)", allow_sudo=True))
 async def ban(event):
     if event.fwd_from:
         return
@@ -341,8 +341,8 @@ async def ban(event):
 
 
 # @register(outgoing=True, pattern="^.unban(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern="unban(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="unban(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="unban(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="unban(?: |$)(.*)", allow_sudo=True))
 async def nothanos(event):
     if event.fwd_from:
         return
@@ -385,7 +385,7 @@ async def nothanos(event):
         await poppo.edit("`Uh oh my unban logic broke!`")
 
 
-@friday.on(friday_on_cmd(pattern=r"mute(?: |$)(.*)"))
+@slayer.on(slayer_on_cmd(pattern=r"mute(?: |$)(.*)"))
 async def spider(event):
     if event.fwd_from:
         return
@@ -451,8 +451,8 @@ async def spider(event):
 
 
 # @register(outgoing=True, pattern="^.unmute(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern="unmute(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="unmute(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="unmute(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="unmute(?: |$)(.*)", allow_sudo=True))
 async def unmoot(event):
     if event.fwd_from:
         return
@@ -507,8 +507,8 @@ async def unmoot(event):
 
 
 # @register(outgoing=True, pattern="^.adminlist$")
-@friday.on(friday_on_cmd(pattern="adminlist$"))
-@friday.on(sudo_cmd(pattern="adminlist$", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="adminlist$"))
+@slayer.on(sudo_cmd(pattern="adminlist$", allow_sudo=True))
 async def get_admin(event):
     if event.fwd_from:
         return
@@ -536,8 +536,8 @@ async def get_admin(event):
 
 
 # @register(outgoing=True, pattern="^.pin(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern="pin(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="pin(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="pin(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="pin(?: |$)(.*)", allow_sudo=True))
 async def pin(event):
     if event.fwd_from:
         return
@@ -582,8 +582,8 @@ async def pin(event):
 
 
 # @register(outgoing=True, pattern="^.kick(?: |$)(.*)")
-@friday.on(friday_on_cmd(pattern="kick(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="kick(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="kick(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="kick(?: |$)(.*)", allow_sudo=True))
 async def kick(event):
     if event.fwd_from:
         return
@@ -632,8 +632,8 @@ async def kick(event):
 
 
 # @register(outgoing=True, pattern="^.users ?(.*)")
-@friday.on(friday_on_cmd(pattern="users ?(.*)"))
-@friday.on(sudo_cmd(pattern="users ?(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="users ?(.*)"))
+@slayer.on(sudo_cmd(pattern="users ?(.*)", allow_sudo=True))
 async def get_users(event):
     if event.fwd_from:
         return
@@ -681,8 +681,8 @@ async def get_users(event):
         )
         remove("userslist.txt")
 
-@friday.on(friday_on_cmd(pattern="zombies(?: |$)(.*)"))
-@friday.on(sudo_cmd(pattern="zombies(?: |$)(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="zombies(?: |$)(.*)"))
+@slayer.on(sudo_cmd(pattern="zombies(?: |$)(.*)", allow_sudo=True))
 async def rm_deletedacc(event):
     if event.fwd_from:
         return
