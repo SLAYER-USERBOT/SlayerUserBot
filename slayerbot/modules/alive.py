@@ -1,14 +1,13 @@
-"""Check if fridaybot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
-# CREDITS: @WhySooSerious, @Sur_vivor
+"""Check if slayerbot alive. If you change these, you become the gayest gay such that even the gay world will disown you."""
 import time
 from telethon import __version__ as tv
 import sys
 import platform
 from git import Repo
-from uniborg.util import friday_on_cmd, sudo_cmd
-from fridaybot import ALIVE_NAME, CMD_HELP, Lastupdate, friday_version
-from fridaybot.Configs import Config
-from fridaybot.modules import currentversion
+from uniborg.util import slayer_on_cmd, sudo_cmd
+from slayerbot import ALIVE_NAME, CMD_HELP, Lastupdate, friday_version
+from slayerbot.Configs import Config
+from slayerbot.modules import currentversion
 
 
 # Functions
@@ -40,20 +39,20 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Slayer"
 PM_IMG = Config.ALIVE_IMAGE
 
 
-@friday.on(friday_on_cmd(pattern=r"alive"))
-@friday.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
-async def friday(alive):
+@slayer.on(slayer_on_cmd(pattern=r"alive"))
+@slayer.on(sudo_cmd(pattern=r"alive", allow_sudo=True))
+async def slayer(alive):
     if alive.fwd_from:
         return
     await alive.get_chat()
     uptime = get_readable_time((time.time() - Lastupdate))
     repo = Repo()
     branch_name = repo.active_branch.name
-    pm_caption = ("➥ **FRIDAY IS:** `ONLINE`\n\n"
+    pm_caption = ("➥ **SLAYER IS:** `ONLINE`\n\n"
                   "➥ **SYSTEMS STATS**\n"
                   f"➥ **Telethon Version:** `{tv}` \n"
                   f"➥ **Python:** `{platform.python_version()}` \n"
@@ -63,10 +62,10 @@ async def friday(alive):
                   f"➥ **Version** : `{friday_version}`\n"
                   f"➥ **My Boss** : {DEFAULTUSER} \n"
                   "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
-                  "➥ **License** : [GNU General Public License v3.0](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n"
-                  "➥ **Copyright** : By [StarkGang@Github](GitHub.com/StarkGang)\n"
+                  "➥ **License** : [GNU General Public License v3.0](github.com/SLAYER-USERBOT/SlayerUserbot/blob/master/LICENSE)\n"
+                  "➥ **Copyright** : By [OWNER](https://t.me/SLAYER_USERBOT)\n"
                   "➥ **Check Stats By Doing** `.stat`. \n\n"
-                  "[🇮🇳 Deploy FridayUserbot 🇮🇳](https://telegra.ph/FRIDAY-06-15)")
+                  "[🇮🇳 Deploy SlayerUserbot 🇮🇳](https://telegra.ph/file/60569be50266114d5e44e.jpg)")
     
     await borg.send_message(
         alive.chat_id,
