@@ -1,6 +1,6 @@
-from fridaybot.Configs import Config
-from fridaybot.utils import friday_on_cmd
-from fridaybot.Configs import Config
+from slayerbot.Configs import Config
+from slayerbot.utils import slayer_on_cmd
+from slayerbot.Configs import Config
 issudousing = Config.SUDO_USERS
 islogokay = Config.PRIVATE_GROUP_ID
 isdbfine = Config.DB_URI
@@ -36,9 +36,9 @@ else:
     gendu = "Not Added ❌"
 
 if wttrapi:
-    starknoobs = "Added ✅"
+    slayernoobs = "Added ✅"
 else:
-    starknoobs = "Not Added ❌"
+    slayernoobs = "Not Added ❌"
 
 if hmmok:
     meiko = "Added ✅"
@@ -51,7 +51,7 @@ else:
     dbstats = "Not Fine ❌"
 
 inlinestats = (
-    f"✘ SHOWING FRIDAY STATS ✘\n"
+    f"✘ SHOWING SLAYER STATS ✘\n"
     f"VERSION = {currentversion} \n"
     f"DATABASE = {dbstats} \n"
     f"SUDO = {amiusingsudo} \n"
