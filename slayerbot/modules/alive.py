@@ -5,7 +5,7 @@ import sys
 import platform
 from git import Repo
 from uniborg.util import slayer_on_cmd, sudo_cmd
-from slayerbot import ALIVE_NAME, CMD_HELP, Lastupdate, friday_version
+from slayerbot import ALIVE_NAME, CMD_HELP, Lastupdate, slayer_version
 from slayerbot.Configs import Config
 from slayerbot.modules import currentversion
 
