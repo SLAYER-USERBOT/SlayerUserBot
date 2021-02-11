@@ -63,7 +63,7 @@ RUN rm -r /root/.cache
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb
 RUN wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
 RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip && unzip opencv.zip && mv -f opencv-master /usr/bin/ && rm opencv.zip
-RUN git clone https://github.com/SLAYER-USERBOT/SlayerUserBot /root/fridaybot
+RUN git clone https://github.com/SLAYER-USERBOT/SlayerUserBot /root/slayerbot
 RUN mkdir /root/slayerbot/bin/
 WORKDIR /root/slayerbot/
 RUN chmod +x /usr/local/bin/*
