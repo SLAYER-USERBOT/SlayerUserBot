@@ -23,7 +23,7 @@ from .Configs import Config
 
 Lastupdate = time.time()
 sedprint = logging.getLogger("WARNING")
-from fridaybot.Configs import Config
+from slayerbot.Configs import Config
 
 
 # All Clients - 3
