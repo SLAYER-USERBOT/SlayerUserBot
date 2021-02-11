@@ -2,7 +2,7 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
-# credits to @AvinashReddy3108
+
 #
 """
 This module updates the userbot based on upstream revision
@@ -15,9 +15,9 @@ from os import environ, execle, path, remove
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from fridaybot import CMD_HELP
-from fridaybot.utils import friday_on_cmd
-from fridaybot.Configs import Config
+from slayerbot import CMD_HELP
+from slayerbot.utils import friday_on_cmd
+from slayerbot.Configs import Config
 
 UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 UPSTREAM_REPO_BRANCH = "master"
@@ -132,7 +132,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@friday.on(friday_on_cmd(pattern=r"update( now| deploy|$)"))
+@slayer.on(slayer_on_cmd(pattern=r"update( now| deploy|$)"))
 async def upstream(event):
     if event.fwd_from:
         return
