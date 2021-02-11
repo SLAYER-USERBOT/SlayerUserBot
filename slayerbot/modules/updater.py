@@ -16,7 +16,7 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from slayerbot import CMD_HELP
-from slayerbot.utils import friday_on_cmd
+from slayerbot.utils import slayer_on_cmd
 from slayerbot.Configs import Config
 
 UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
@@ -127,7 +127,7 @@ async def update(event, repo, ups_rem, ac_br):
         "**Soft Update Successful, Please Wait For Some Time To Get This Process Completed.**"
     )
     # Spin a new instance of bot
-    args = [sys.executable, "-m", "fridaybot"]
+    args = [sys.executable, "-m", "slayerbot"]
     execle(sys.executable, *args, environ)
     return
 
