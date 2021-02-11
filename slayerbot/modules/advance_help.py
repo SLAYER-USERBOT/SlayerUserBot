@@ -1,9 +1,9 @@
-from fridaybot import CMD_HELP
-from fridaybot.utils import friday_on_cmd, sudo_cmd
+from slayerbot import CMD_HELP
+from slayerbot.utils import slayer_on_cmd, sudo_cmd
 
 
-@friday.on(sudo_cmd(pattern="ahelp ?(.*)", allow_sudo=True))
-@friday.on(friday_on_cmd(pattern="ahelp ?(.*)"))
+@slayer.on(sudo_cmd(pattern="ahelp ?(.*)", allow_sudo=True))
+@slayer.on(slayer_on_cmd(pattern="ahelp ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
