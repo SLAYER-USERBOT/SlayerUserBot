@@ -1,4 +1,4 @@
-#    Copyright (C) Midhun KM 2020-2021
+#    Copyright (C) SLAYER 2020-2021
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -20,23 +20,23 @@ from re import findall
 import requests
 from youtube_search import YoutubeSearch
 from search_engine_parser import GoogleSearch
-from fridaybot.function import _ytdl, fetch_json, _deezer_dl, all_pro_s
+from slayerbot.function import _ytdl, fetch_json, _deezer_dl, all_pro_s
 from urllib.parse import quote
 import requests
 from telethon import Button, custom, events, functions
 from youtubesearchpython import VideosSearch
-from fridaybot import ALIVE_NAME, CMD_HELP, CMD_LIST, client2 as client1, client3 as client2, bot as client3
-from fridaybot.modules import inlinestats
+from slayerbot import ALIVE_NAME, CMD_HELP, CMD_LIST, client2 as client1, client3 as client2, bot as client3
+from slayerbot.modules import inlinestats
 from pornhub_api import PornhubApi
 from telethon.tl.types import BotInlineResult, InputBotInlineMessageMediaAuto, DocumentAttributeImageSize, InputWebDocument, InputBotInlineResult
 from telethon.tl.functions.messages import SetInlineBotResultsRequest
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
-    WARN_PIC = "https://telegra.ph/file/53aed76a90e38779161b1.jpg"
+    WARN_PIC = "https://telegra.ph/file/60569be50266114d5e44e.jpg"
 else:
     WARN_PIC = PMPERMIT_PIC
 LOG_CHAT = Config.PRIVATE_GROUP_ID
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Friday"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Slayer"
 
 
 @tgbot.on(events.InlineQuery)
@@ -45,7 +45,7 @@ async def inline_handler(event):
     builder = event.builder
     result = None
     query = event.text
-    if event.query.user_id in o and query.startswith("Friday"):
+    if event.query.user_id in o and query.startswith("Slayer"):
         rev_text = query[::-1]
         buttons = paginate_help(0, CMD_HELP, "helpme")
         result = builder.article(
@@ -58,11 +58,11 @@ async def inline_handler(event):
     elif event.query.user_id in o and query == "stats":
         result = builder.article(
             title="Stats",
-            text=f"**Showing Stats For {DEFAULTUSER}'s Friday** \nNote --> Only Owner Can Check This \n(C) @FridayOT",
+            text=f"**Showing Stats For {DEFAULTUSER}'s Slayer** \nNote --> Only Owner Can Check This \n(C) @Slayer_UserBot",
             buttons=[
                 [custom.Button.inline("Show Stats ?", data="terminator")],
-                [Button.url("Repo 🇮🇳", "https://github.com/StarkGang/FridayUserbot")],
-                [Button.url("Join Channel ❤️", "t.me/Fridayot")],
+                [Button.url("Repo 🇮🇳", "https://github.com/SLAYER-USERBOT/SlayerUserbot")],
+                [Button.url("Join Channel ❤️", "t.me/Slayer_UserBot")],
             ],
         )
         await event.answer([result])
@@ -135,7 +135,7 @@ async def on_plug_in_callback_query_handler(event):
     if plugin_name in CMD_HELP:
         help_string = f"**💡 PLUGIN NAME 💡 :** `{plugin_name}` \n{CMD_HELP[plugin_name]}"
     reply_pop_up_alert = help_string
-    reply_pop_up_alert += "\n\n**(C) @FRIDAYOT** ".format(plugin_name)
+    reply_pop_up_alert += "\n\n**(C) @SLAYER_USERBOT** ".format(plugin_name)
     if len(reply_pop_up_alert) >= 4096:
         crackexy = "`Pasting Your Help Menu.`"
         await event.answer(crackexy, cache_time=0, alert=True)
@@ -231,8 +231,8 @@ async def sed(event):
     await event.answer("Back", cache_time=0, alert=False)
     # This Is Copy of Above Code. (C) @SpEcHiDe
     buttons = paginate_help(sedm, CMD_HELP, "helpme")
-    sed = f"""Friday Userbot Modules Are Listed Here !\n
-For More Help or Support Visit @FridayOT \nCurrently Loaded Plugins: {len(CMD_LIST)}"""
+    sed = f"""Slayer Userbot Modules Are Listed Here !\n
+For More Help or Support Visit @SLAYERUSERBOT \nCurrently Loaded Plugins: {len(CMD_LIST)}"""
     await event.edit(message=sed, buttons=buttons)
 
 
@@ -540,7 +540,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id not in o:
         resultm = builder.article(
             title="- Not Allowded -",
-            text=f"You Can't Use This Bot. \nDeploy Friday To Get Your Own Assistant, Repo Link [Here](https://github.com/StarkGang/FridayUserbot)",
+            text=f"You Can't Use This Bot. \nDeploy Friday To Get Your Own Assistant, Repo Link [Here](https://github.com/SLAYER-USERBOT/SlayerUserbot)",
         )
         await event.answer([resultm])
         return
